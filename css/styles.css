@@ -10,5 +10,74 @@ html {
 }
 
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.centered {
+    display: block;
+    margin: auto;
+}
+
+/* SearchBox */
+.search-box {
+    border-radius: 5px;
+    border: #ccc 1px solid;
+    color: #95afc0;
+    outline: none;
+    margin-top: 50px;
+    max-width: 450px;
+    padding: 10px;
+    width: 50%;
+    transition: .5s;
+}
+
+.search-box:focus {
+    background-color: #dff9fb;
+    color: #222f3e;
+}
+
+/* Color the placeholder */
+::-webkit-input-placeholder {
+    color: #95afc0;
+}
+
+::-moz-placeholder {
+    color: #95afc0;
+}
+
+:-ms-input-placeholder {
+    color: #95afc0;
+}
+
+::placeholder {
+    color: #95afc0;
+}
+
+/* ==================== */
+/* Images  */
+.images-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 990px;
+    margin: auto;
+}
+
+.image-container {
+    padding: 20px 0;
+}
+
+/* ============== */
+/* Media queries */
+@media (min-width:600px) {
+    .images-container {
+        flex-direction: row;
+    }
 }
