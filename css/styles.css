@@ -33,7 +33,7 @@ body {
     max-width: 450px;
     padding: 10px;
     width: 50%;
-    transition: .5s;
+    transition: background-color .5s;
 }
 
 .search-box:focus {
@@ -71,7 +71,21 @@ body {
 }
 
 .image-container {
-    padding: 20px 0;
+    margin: 20px 0;
+    transition: background .2s;
+    vertical-align: top;
+}
+
+.image-container:hover {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+img {
+    position: relative;
+    height: 100%;
+    vertical-align: middle;
+
 }
 
 /* ============== */
