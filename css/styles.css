@@ -13,11 +13,6 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-.container {
-    margin: 0 auto;
-    width: 80%;
-}
-
 .centered {
     display: block;
     margin: auto;
@@ -29,7 +24,7 @@ body {
     border: #ccc 1px solid;
     color: #95afc0;
     outline: none;
-    margin-top: 50px;
+    margin-top: 150px;
     max-width: 450px;
     padding: 10px;
     width: 50%;
@@ -67,7 +62,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 990px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .image-container {
@@ -81,11 +76,50 @@ body {
     cursor: pointer;
 }
 
-img {
+.photo {
     position: relative;
     height: 100%;
+    z-index:-1;
     vertical-align: middle;
+}
+/* LIGHTBOX CSS */
+.lightboxOverlay{
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
+.lb-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:transparent;
+}
+/* Lightbox img */
+.lightbox .lb-image{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.lb-dataContainer{
+    margin-top:25px;
+}
+.lb-data .lb-caption{
+    font-size:1.5em;
+    position: relative;
+    left:5%;
+    line-height:1.5;
+}
+.lb-data {
+    color:#dff9fb;
+}
+a.lb-close:hover{
+   cursor:pointer;
 }
 
 /* ============== */
@@ -93,5 +127,14 @@ img {
 @media (min-width:600px) {
     .images-container {
         flex-direction: row;
+    }
+/* Display Next & Previous buttons outside of image */
+    .lb-next{
+        position:absolute;
+        right:-80px !important;
+    }
+    .lb-prev{
+        position:absolute;
+        left:-80px !important;
     }
 }
