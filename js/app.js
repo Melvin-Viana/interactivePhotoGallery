@@ -13,15 +13,15 @@ $('.image-container').each(function(index,val){
         // Find anchor tag and get its href value
         let val =$(this).find('a').attr('href');
         //Select anchor with href value and trigger
-        $(`a[href='${val}']`).trigger('click');
+        $('a[href="'+val+'"]').trigger('click');
     });
 
     lightbox.option({
-    maxWidth:1100,
+    maxWidth:1000,
     showImageNumberLabel:false,
     fitImagesInViewport:true,
     alwaysShowNavOnTouchDevices	:true,
-    positionFromTop: 100
+    positionFromTop: 100,
     });
 
     $(".search-box").keyup(function(event){
@@ -46,6 +46,5 @@ $('.image-container').each(function(index,val){
             //Add 'images" to data-lightbox to visible images 
             $('.image-container').eq(imgIndexArr.visible[i]).find('a').attr('data-lightbox',"images");
         }
-        console.log(imgIndexArr.visible);
     });
 });
