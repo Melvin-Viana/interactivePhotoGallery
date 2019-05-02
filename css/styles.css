@@ -22,9 +22,10 @@ body {
 .search-box {
     border-radius: 5px;
     border: #ccc 1px solid;
-    color: #95afc0;
+    color: #eb4d4b;
     outline: none;
-    margin-top: 150px;
+    margin-bottom:50px;
+    margin-top: 100px;
     max-width: 450px;
     padding: 10px;
     width: 50%;
@@ -32,25 +33,25 @@ body {
 }
 
 .search-box:focus {
-    background-color: #dff9fb;
+    background-color: #f6e58d;
     color: #222f3e;
 }
 
 /* Color the placeholder */
 ::-webkit-input-placeholder {
-    color: #95afc0;
+    color: #eb4d4b;
 }
 
 ::-moz-placeholder {
-    color: #95afc0;
+    color: #eb4d4b;
 }
 
 :-ms-input-placeholder {
-    color: #95afc0;
+    color: #eb4d4b;
 }
 
 ::placeholder {
-    color: #95afc0;
+    color: #eb4d4b;
 }
 
 /* ==================== */
@@ -74,78 +75,90 @@ body {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.2);
 }
-.image-link{
+
+.image-link {
     z-index: 2;
     height: 100%;
- width: 100%;
- display: block;
- transition: background .2s;
+    width: 100%;
+    display: block;
+    transition: background .2s;
 }
 
 .photo {
     position: relative;
     height: 100%;
-    z-index:-1;
+    z-index: -1;
     vertical-align: middle;
 }
+
 /* LIGHTBOX CSS */
-.lightboxOverlay{
-    position: fixed; /* Sit on top of the page content */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
+.lightboxOverlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
-.lb-outerContainer{
-    max-width:950px;
+
+.lb-outerContainer {
+    max-width: 950px;
 }
-.lb-container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:transparent;
+
+.lb-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
 }
+
 /* Lightbox img */
- .lb-image{
-    border:none;
-    max-width:700px;
+.lb-image {
+    border: none;
+    max-width: 700px;
 }
 
 /* Captions and Close button */
-.lb-dataContainer{
-    margin-top:25px;
+.lb-dataContainer {
+    margin-top: 25px;
 }
-.lb-data .lb-caption{
-    font-size:1.5em;
+
+.lb-data .lb-caption {
+    font-size: 1.5em;
     position: relative;
-    left:5%;
-    line-height:1.5;
+    left: 5%;
+    line-height: 1.5;
 }
+
 .lb-data {
-    color:#dff9fb;
+    color: #dff9fb;
 }
-a.lb-close:hover{
-   cursor:pointer;
+
+a.lb-close:hover {
+    cursor: pointer;
 }
 
 /* ============== */
 /* Media queries */
 /* Desktop and larger tablets */
-@media (min-width:1024px)  
-and (orientation: landscape) 
-{
+@media (min-width:1024px) and (orientation: landscape) {
+
     /* Display Next & Previous buttons outside of image */
-    .lb-next{
-        position:absolute;
-        right:-100px !important;
+    .lb-next {
+        position: absolute;
+        right: -100px !important;
     }
-    .lb-prev{
-        position:absolute;
-        left:-100px !important;
+
+    .lb-prev {
+        position: absolute;
+        left: -100px !important;
     }
 }
+
 @media (min-width:600px) {
     .images-container {
         flex-direction: row;
