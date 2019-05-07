@@ -5,6 +5,6 @@ Using jQuery and JavaScript to create an interactive photo gallery.
 
 ## Lessons Learned
 1. JavaScript
-2. DOM Traversal
-3. .addEventListener()
-4. .removeEventListener()
+2. jQuery
+3. jQuery Plugins
+4. jQuery Lightbox Plugin
